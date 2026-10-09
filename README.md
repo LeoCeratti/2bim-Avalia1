@@ -22,6 +22,6 @@ Framework preset: `None`. Build command: vazio. Build output directory: `public`
 
 ## Identificação (preencha após o fork)
 
-Nome: 
-RA: 
-URL: https://
+Nome: Leonardo Ceratti dos Santos
+RA: 2026107850
+URL: https://2bim-Avalia1.pages.dev
