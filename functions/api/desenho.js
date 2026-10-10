@@ -36,7 +36,14 @@ export async function onRequest({ request, env }) {
     return resp(401, 'Não foi possível verificar o token');
   }
 
-  if (info.aud !== env.GOOGLE_CLIENT_ID) return resp(401, 'aud diferente do Client ID');
+  // DIAGNÓSTICO TEMPORÁRIO: mostra o aud do token e o valor lido da variável
+  if (info.aud !== env.GOOGLE_CLIENT_ID)
+    return resp(
+      401,
+      'aud diferente do Client ID | token=' + info.aud + ' (' + String(info.aud).length +
+      ') | env=' + env.GOOGLE_CLIENT_ID + ' (' + String(env.GOOGLE_CLIENT_ID).length + ')'
+    );
+
   if (info.email_verified !== 'true' || !info.email) return resp(401, 'E-mail não verificado');
 
   // 200
