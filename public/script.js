@@ -49,7 +49,8 @@ formulario.addEventListener('submit', async (evento) => {
       return mostrarErro('Erro 400: informe um número inteiro entre 1 e 100.');
     }
     if (resposta.status === 401) {
-      return mostrarErro('Erro 401: faça login com o Google (a sessão pode ter expirado).');
+      const motivo = await resposta.text();
+      return mostrarErro('Erro 401: faça login com o Google (a sessão pode ter expirado). [' + motivo + ']');
     }
     if (!resposta.ok) {
       return mostrarErro('Erro ' + resposta.status + ' ao gerar o desenho.');
