@@ -25,3 +25,4 @@ Framework preset: `None`. Build command: vazio. Build output directory: `public`
 Nome: Leonardo Ceratti dos Santos
 RA: 2026107850
 URL: https://2bim-avalia1-bny.pages.dev/
+
