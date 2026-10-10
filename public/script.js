@@ -1,4 +1,4 @@
-const CLIENT_ID = 'COLE_AQUI_SEU_CLIENT_ID.apps.googleusercontent.com'; // público, pode ficar no repositório
+const CLIENT_ID = '410897697705-tehirtfb0foiis8ebfu1ek5i6mn4mums.apps.googleusercontent.com'; // público, pode ficar no repositório
 
 let idToken = null;
 let svgAtual = null;
@@ -18,7 +18,7 @@ function mostrarErro(texto) {
 
 window.addEventListener('load', () => {
   google.accounts.id.initialize({
-    client_id: '410897697705-tehirtfb0foiis8ebfu1ek5i6mn4mums.apps.googleusercontent.com',
+    client_id: CLIENT_ID,
     callback: (resposta) => {
       idToken = resposta.credential;
       mensagem.textContent = 'Login feito. Agora escolha um número e clique em Desenhar.';
